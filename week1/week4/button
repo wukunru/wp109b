@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+button {
+	padding: 20px 10px;
+    background-color: DodgerBlue;
+    color:black;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.warning {
+	background-color: IndianRed;
+}
+
+.info {
+	background-color: LightGreen; 
+}
+ 
+</style>
+</head>
+<body>
+<button>Primay</button>
+<button class="warning">Warning</button>
+<button>Primay</button>
+<button class="info">Info</button>
+<button class="info">Info</button>
+<button class="warning">Warning</button>
+</body>
+</html>
