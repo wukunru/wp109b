@@ -32,7 +32,7 @@ function show_btn(){
 }
 function hide_btn(){
     if(btn_show===true){
-        document.querySelector(".again").classList.add(".again_hide");
+        document.querySelector(".again").classList.add("again_hide");
         btn_show=false;
         game_stop=false;
     }
@@ -72,7 +72,7 @@ function show_score(){
     for(let i=0;i<high_score.length;i++){
         score_li[i].innerText=`第 ${i+1} 名: ${high_score[i]}`;
     }
-    document.querySelector('score_board').style.display="inline-block";
+    document.querySelector('.score_board').style.display="inline-block";
 }
 function sort_score(high_score, score){
     for(let i=high_score.length-1; i>=0;i--){
@@ -97,7 +97,8 @@ function react_score(score){
             document.querySelector("h4").innerText="差遠了";
         }
     }
-}function reset(){
+}
+function reset(){
     document.querySelector(".again").addEventListener("click",
         function(e){
             if (game_stop===true){
@@ -111,7 +112,7 @@ function react_score(score){
     )
 }
 start();
-document.querySelector("body").onrejectionhandled("click",
+document.querySelector("body").addEventListener("click",
     function(e){
         if(e.target.tagName==='BODY'||e.target.tagName==='DIV'){
             game();

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>輸入想說的話</title>
+        <script>
+            window.onload = function(){
+                var Input = document.getElementById("myInput");
+                var messageBox = document.getElementById("messageBox");
+                function post(){
+                    if(Input.value){
+                        var oTime = document.createElement("div");
+                        oTime.className = "time";
+                        var myDate = new Date();
+                        oTime.innerHTML = myDate.toLocaleString();
+                        messageBox.appendChild(oTime);
+
+                        var message = document.createElement("div");
+                        message.className="message";
+                        message.innerHTML=Input.value;
+                        Input.value="";
+                        messageBox.appendChild(message);
+                    }
+                }
+            }
+        </script>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <div>請留言</div>
+            <textarea id="messageBox"></textarea>
+            <div>
+                <input id="myInput" type="text" placeholder="輸入內容"><button onclick="post()">提交</button>
+            </div>
+        </div>
+    </body>
+</html>
+   
+      

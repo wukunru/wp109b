@@ -1,0 +1,48 @@
+<!DOCTYPE  html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>留下想說的話</title>
+        <script>
+
+            window.onload = function(){
+                
+                var oMessageBox = document.getElementById("messageBox");
+                var oInput = document.getElementById("myInput");
+                var oPostBtn = document.getElementById("doPost");
+                
+                oPostBtn.onclick = function(){
+                    if(oInput.value){
+                        
+                        var oTime = document.createElement("div");
+                        oTime.className = "time";
+                        var myDate = new  Date();
+                        oTime.innerHTML = myDate.toLocaleString();
+                        oMessageBox.appendChild(oTime);
+                        
+                        
+                        var oMessageContent = document.createElement("div");
+                        oMessageContent.className = "message_content";
+                        oMessageContent.innerHTML = oInput.value;
+                        oInput.value = "";
+                        oMessageBox.appendChild(oMessageContent);
+                    }
+                    
+                }
+                
+            }
+        
+        </script>
+        <style>
+
+        </style>
+   
+    </head>
+    <body>
+        <div class="content">
+            <div class="title">你的留言</div>
+            <div class="message_box" id="messageBox"></div>
+            <div><input id="myInput" type="text" placeholder="輸入你的留言"><button id="doPost">提交</button></div>
+        </div>
+    </body>
+</html>
